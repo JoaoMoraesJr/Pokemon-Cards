@@ -1,0 +1,63 @@
+<section class="section-page">
+    
+        <section class="the-buttons">
+                <button class="btn btn-warning" (click) = "getAllPokemons()">Random Pokemon Cards</button>
+        
+
+                <div class="btn-group" role="group" aria-label="Basic example" *ngFor = "let tp of types">
+                        <button type= "button" class="btn btn-dark" (click) = "getPokemonByType(tp)" >{{tp}}</button>
+                </div>
+        </section>
+
+        <h1 class="title">POKEMON CARDS</h1>
+
+ <!-- DROPDOWN 
+    <select [(ngModel)]="selectedCategory" style="margin-left: 464px">
+            <option *ngFor = "let tp of types" [value]="tp">
+                {{tp}}
+            </option>
+        </select>
+        
+        <button class="btn btn-primary" (click) = "getPokemonByType(selectedCategory)" [disabled]="!selectedCategory">Generate Selected Type</button>
+     -->
+     <div class = "deck-word-cards">
+     <div  *ngIf="deck.length>0">
+            <br>
+            <p class="deck-word">DECK</p>
+
+            <br>
+
+     </div>
+        
+        <div class="d-inline-flex col-md-12 flex-wrap justify-content-left" *ngIf="deck.length>0">
+        
+        
+                    <div class="flex-container2" *ngFor = "let d of deck; let i = index">
+                            <div><img src= {{d}} (click) = "removeCard(i)"></div>
+                    </div>
+            
+        </div>
+</div>
+        <br>
+        <br>
+        
+        <section class="cards" id="cardsid">
+            <p class="cards-word">CARDS</p>
+            <ul class="meals-showcase">
+                    <li >
+                            <div class="flex-container" *ngFor = "let c of cardsImage" >
+                                    <div><img src= {{c}} (click) = "addCards(c)"></div>
+                            </div>
+                        
+                    </li>
+            </ul>
+        </section>
+
+        
+
+
+</section>
+
+
+
+
