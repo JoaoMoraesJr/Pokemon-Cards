@@ -1,15 +1,16 @@
-<section class="section-page">
+<div class="section-page col-md-12">
     
-        <section class="the-buttons">
+        <div class="the-buttons">
                 <button class="btn btn-warning" (click) = "getAllPokemons()">Random Pokemon Cards</button>
         
 
                 <div class="btn-group" role="group" aria-label="Basic example" *ngFor = "let tp of types">
                         <button type= "button" class="btn btn-dark" (click) = "getPokemonByType(tp)" >{{tp}}</button>
                 </div>
-        </section>
-
-        <h1 class="title">POKEMON CARDS</h1>
+        </div>
+        <div class="col-md-12 justify-content-center">
+                <h1 class="title">POKEMON CARDS</h1>
+        </div>
 
  <!-- DROPDOWN 
     <select [(ngModel)]="selectedCategory" style="margin-left: 464px">
@@ -23,7 +24,7 @@
      <div class = "deck-word-cards">
      <div  *ngIf="deck.length>0">
             <br>
-            <p class="deck-word">DECK</p>
+            <p class="deck-word title">DECK</p>
 
             <br>
 
@@ -41,22 +42,22 @@
         <br>
         <br>
         
-        <section class="cards" id="cardsid">
-            <p class="cards-word">CARDS</p>
+        <div class="cards" id="cardsid">
+            <p class="cards-word title">CARDS</p>
             <ul class="meals-showcase">
                     <li >
                             <div class="flex-container" *ngFor = "let c of cardsImage" >
-                                    <div><img src= {{c}} (click) = "addCards(c)"></div>
+                                    <div><img layout="fill" src= {{c}} (click) = "addCards(c)"></div>
                             </div>
                         
                     </li>
             </ul>
-        </section>
+        </div>
 
         
 
 
-</section>
+</div>
 
 
 
