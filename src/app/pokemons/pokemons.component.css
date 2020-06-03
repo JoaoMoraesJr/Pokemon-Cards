@@ -2,7 +2,6 @@
 /* ----- REGULAR CARD IMAGES ----- */
 
 .flex-container img {
-    opacity: 0.7%;
     width: 300px;
     height: 412.2px;
     transform: scale(0.5);
@@ -22,7 +21,6 @@
 /* ----- DECK IMAGES ----- */
 
 .flex-container2 img {
-    opacity: 0.7%;
     width: 157.5px;
     height: 216.5px;
     transform: scale(0.5);
