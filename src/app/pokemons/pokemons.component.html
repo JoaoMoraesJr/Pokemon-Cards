@@ -1,18 +1,18 @@
 <div class="section-page col-md-12">
-    
-        <div class="the-buttons">
-                <button class="btn btn-warning" (click) = "getAllPokemons()">Random Pokemon Cards</button>
-        
 
-                <div class="btn-group" role="group" aria-label="Basic example" *ngFor = "let tp of types">
-                        <button type= "button" class="btn btn-dark" (click) = "getPokemonByType(tp)" >{{tp}}</button>
-                </div>
-        </div>
-        <div class="col-md-12 justify-content-center">
-                <h1 class="title">POKEMON CARDS</h1>
-        </div>
+	<div class="the-buttons">
+		<button class="btn btn-warning" (click)="getAllPokemons()">Random Pokemon Cards</button>
 
- <!-- DROPDOWN 
+
+		<div class="btn-group" role="group" aria-label="Basic example" *ngFor="let tp of types">
+			<button type="button" class="btn btn-dark" (click)="getPokemonByType(tp)">{{tp}}</button>
+		</div>
+	</div>
+	<div class="col-md-12 justify-content-center">
+		<h1 class="title">POKEMON CARDS</h1>
+	</div>
+
+	<!-- DROPDOWN 
     <select [(ngModel)]="selectedCategory" style="margin-left: 464px">
             <option *ngFor = "let tp of types" [value]="tp">
                 {{tp}}
@@ -21,44 +21,37 @@
         
         <button class="btn btn-primary" (click) = "getPokemonByType(selectedCategory)" [disabled]="!selectedCategory">Generate Selected Type</button>
      -->
-     <div class = "deck-word-cards">
-     <div  *ngIf="deck.length>0">
-            <br>
-            <p class="deck-word title">DECK</p>
+	<div class="deck-word-cards">
+		<div *ngIf="deck.length>0">
+			<br>
+			<p class="deck-word title">DECK</p>
 
-            <br>
+			<br>
 
-     </div>
-        
-        <div class="d-inline-flex col-md-12 flex-wrap justify-content-left" *ngIf="deck.length>0">
-        
-        
-                    <div class="flex-container2" *ngFor = "let d of deck; let i = index">
-                            <div><img src= {{d}} (click) = "removeCard(i)"></div>
-                    </div>
-            
-        </div>
-</div>
-        <br>
-        <br>
-        
-        <div class="cards" id="cardsid">
-            <p class="cards-word title">CARDS</p>
-            <ul class="meals-showcase">
-                    <li >
-                            <div class="flex-container" *ngFor = "let c of cardsImage" >
-                                    <div><img layout="fill" src= {{c}} (click) = "addCards(c)"></div>
-                            </div>
-                        
-                    </li>
-            </ul>
-        </div>
+		</div>
 
-        
+		<div class="d-inline-flex col-md-12 flex-wrap" *ngIf="deck.length>0">
+
+
+			<div class="flex-container2" *ngFor="let d of deck; let i = index">
+				<div><img src={{d}} (click)="removeCard(i)"></div>
+			</div>
+
+		</div>
+	</div>
+	<br>
+	<br>
+
+	<div class="cards" id="cardsid">
+		<p class="cards-word title">CARDS</p>
+		<ul class="cards-list">
+			<li class="flex-container" *ngFor="let c of cardsImage">
+				<div><img layout="fill" src={{c}} (click)="addCards(c)"></div>
+			</li>
+		</ul>
+	</div>
+
+
 
 
 </div>
-
-
-
-

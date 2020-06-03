@@ -1,21 +1,22 @@
 
+*{
+    padding: 0;
+    margin: 0;
+}
 /* ----- REGULAR CARD IMAGES ----- */
 
 .flex-container img {
     width: 300px;
     height: 412.2px;
-    transform: scale(0.5);
+    transform: scale(0.6);
     transition: transform 0.5s, opacity 0.5s;
     margin-bottom: -40px;
-    margin-left: -40px;
-    float: left;
+    padding: 0;
 }
 
 .flex-container img:hover {
     opacity: 1;
-    transform: scale(0.9);
-    margin-left: -40px;
-
+    transform: scale(1);
 }
 
 /* ----- DECK IMAGES ----- */
@@ -67,8 +68,13 @@ p {
 .cards-word {
     font-size: 40px;
     margin-top: 50px;
-    margin-bottom: -40px;
     /* margin-left: 880px; */
+}
+
+.cards-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .deck-word {
@@ -77,12 +83,9 @@ p {
     /* margin-left: 900pZ */
 }
 
-.deck-word-cards{
-    margin-top: 40px;
-}
-
 .d-inline-flex {
-    margin-left: 60px;
+    padding: 0 5%;
+    justify-content: flex-start;
 }
 
 /* ----- BUTTONS ----- */
@@ -99,9 +102,49 @@ p {
 }
 
 .the-buttons {
-    margin-left: 25%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn {
+    padding: 10px;
 }
 
 .section-page {
     flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 620px) {
+    .flex-container img {
+        width: 150px;
+        height: 200px;
+        transform: scale(0.6);
+        transition: transform 0.5s, opacity 0.5s;
+        margin-bottom: -40px;
+        padding: 0;
+    }
+    
+    .flex-container img:hover {
+        opacity: 1;
+        transform: scale(0.8);
+    }
+
+    .cards-word {
+        font-size: 40px;
+        margin-top: 0px;
+        /* margin-left: 880px; */
+    }
+
+    .d-inline-flex {
+        justify-content: center;
+    }
+
+    .flex-container2 img {
+        margin-left: 0;
+    }
+
+    .flex-container2 img:hover {
+        margin-left: 0;
+    }
 }
