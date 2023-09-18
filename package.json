@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --base-href Pokemon-Cards",
+    "build": "ng build --base-href /Pokemon-Cards/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
